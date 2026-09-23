@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách lỗi trong file blog_wrong.html</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 900px;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #d9534f;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        ul {
+            background: #f9f9f9;
+            padding: 20px 20px 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        code {
+            background: #fdf6e3;
+            padding: 3px 6px;
+            border-radius: 4px;
+            color: #c7254e;
+            font-family: Consolas, monospace;
+            border: 1px solid #eee;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Các lỗi sai trong file blog_wrong.html</h1>
+    
+    <ul>
+        <li><span class="highlight">Thẻ meta charset:</span> File sai sử dụng <code>&lt;meta charset="utf8"&gt;</code>, định dạng chuẩn ở file gốc là <code>&lt;meta charset="UTF-8"&gt;</code>.</li>
+        
+        <li><span class="highlight">Thẻ title:</span> Bị dư thừa một thẻ <code>&lt;title&gt;Blakletterpress&lt;/title&gt;</code> trong phần <code>&lt;head&gt;</code>. Một tài liệu HTML chỉ nên có một thẻ title.</li>
+        
+        <li><span class="highlight">Lỗi lặp thuộc tính class:</span> Ở thẻ liên kết tới trang chủ, file sai định nghĩa 2 thuộc tính class tách biệt: <code>class="sitename" class="brand"</code>. Cú pháp đúng gộp chung vào một: <code>class="sitename brand"</code> (bản chuẩn chỉ có <code>class="sitename"</code>).</li>
+        
+        <li><span class="highlight">Thuộc tính width của ảnh:</span> Ở thẻ ảnh <code>blakletterpress.png</code>, thuộc tính width bị viết thêm hậu tố px: <code>width="142px"</code>. Trong HTML thuần, nó chỉ cần là <code>width="142"</code>.</li>
+        
+        <li><span class="highlight">Thiếu thuộc tính alt:</span> Thẻ ảnh <code>header-text.png</code> bị mất thuộc tính <code>alt="Text"</code>.</li>
+        
+        <li><span class="highlight">Thẻ định dạng văn bản:</span> Trong đoạn văn của bài viết đầu tiên (BLOG TITLE ONE), chữ "free" bị bọc trong thẻ in nghiêng <code>&lt;i&gt;free&lt;/i&gt;</code>, không giống với nguyên bản gốc.</li>
+        
+        <li><span class="highlight">Sai cấu trúc HTML:</span> Trước thẻ đóng <code>&lt;/ul&gt;</code> của danh sách bài viết (list), file lỗi chèn một thẻ <code>&lt;div class="ad"&gt;Sponsored&lt;/div&gt;</code>. Thẻ <code>div</code> không được phép làm con trực tiếp của thẻ <code>ul</code>.</li>
+        
+        <li><span class="highlight">Thay đổi URL (href):</span> Trong phần phân trang (pagination), thẻ liên kết chữ "First" bị đổi link thành <code>href="blog.html?page=2&sort=new"</code>, chuẩn của nó chỉ là <code>href="blog.html"</code>.</li>
+        
+        <li><span class="highlight">Thiếu thẻ đóng liên kết (anchor):</span> Ở phần phân trang số 1, thẻ liên kết bị thiếu phần đóng, tạo thành <code>&lt;a href="blog.html"&gt;1 &lt;a href="blog.html"&gt;2&lt;/a&gt;</code> (Thiếu <code>&lt;/a&gt;</code> sau số 1).</li>
+        
+        <li><span class="highlight">Lỗi trùng lặp ID:</span> Thẻ <code>&lt;ul&gt;</code> trong thanh điều hướng (navigation) ở sidebar bị thêm <code>id="list"</code>. Id này đã được dùng cho danh sách bài viết chính, mà một ID chỉ được xuất hiện duy nhất 1 lần trên một trang.</li>
+        
+        <li><span class="highlight">Đóng sai thẻ danh sách:</span> Ở phần "Placeholder" trong sidebar, danh sách được mở bằng <code>&lt;ul&gt;</code> nhưng lại bị đóng bằng <code>&lt;/ol&gt;</code>.</li>
+        
+        <li><span class="highlight">Trống thuộc tính href:</span> Thẻ liên kết của nút "View More" ở phần sidebar bị bỏ trống <code>href=""</code>. Ở bản gốc, nó liên kết tới trang tin tức <code>href="news.html"</code>.</li>
+    </ul>
+
+</body>
+</html>
